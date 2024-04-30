@@ -6,5 +6,5 @@ The results is directly related to section 3.2 for explicit heat transfer equati
 
 To produce the data, please do the DC part and UIC part seprately and following the instruction under 
 
-./DC/REPRODUCE.md
-./UIC/REPRODUCE.md
+./DC/REPRODUCE.txt
+./UIC/REPRODUCE.txt
