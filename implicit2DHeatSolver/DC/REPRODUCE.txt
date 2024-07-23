@@ -1,15 +1,20 @@
+Caution!
+This is only an exmaple of the showing the workflow works for the paper. If you want to exactly reproduce the
+result on the paper, please modify the file heatTrans_UQ.f90: nx = 1000, ny =1000 to nx = 10000 , ny = 10000.
+
+
 This code is originiall from: https://github.com/omersan/5.03.Heat2D/tree/master
 
 1. To reprocude the Result on Intel processor:
 ================================================
 1.1 compile the code
 using compiling flags:
-gfortran -O3 -g -march='cascadelake' -mprefer-vector-width=512 -funroll-loops *.f90 -o heatTrans
+gfortran -O3 -g -march=native -mprefer-vector-width=512 -funroll-loops *.f90 -o heatTrans
 ================================================
 1.2 measure the coresponding performance of the kernel
 to draw the roofline model of the kernels, please install the intel advisor(2023)
 use following command:
-advixe-cl --collect=roofline --project-dir=./roofline_results -- ./heatTrans.f90
+advixe-cl --collect=roofline --project-dir=./roofline_results -- ./heatTrans
 
 the roofline model of all loops and kernels can be read in using GUI of advisor to open the result
 

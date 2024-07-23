@@ -34,8 +34,8 @@ y0 =-1.0d0 !bottom
 yL = 1.0d0 !up
 
 !number of points
-nx = 10000
-ny = 10000
+nx = 1000
+ny = 1000
 
 !grid spacing (spatial)
 dx = (xL-x0)/dfloat(nx)
